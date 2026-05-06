@@ -35,9 +35,8 @@ app.use("/api/messages", messageRoutes);
 // ================= STATIC FILES =================
 
 // 🔥 FIX: avoid undefined crash
-const profilePicsDir = process.env.PROFILE_PICS_DIR
-  ? path.join(__dirname, process.env.PROFILE_PICS_DIR)
-  : path.join(__dirname, "uploads/profilePics");
+const profilePicsDir = path.join(__dirname, "uploads/profilePics");
+
 
 // ensure static works
 app.use("/profilepics", express.static(profilePicsDir));
