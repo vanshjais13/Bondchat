@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config(); // load .env variables
 
 // Get directory from env
-const profilePicsDir = path.join(process.cwd(), process.env.PROFILE_PICS_DIR);
+const profilePicsDir = path.join(process.cwd(), "uploads/profilePics");
 
 // Ensure the profilepics directory exists
 if (!fs.existsSync(profilePicsDir)) {

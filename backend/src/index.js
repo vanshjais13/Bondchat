@@ -23,7 +23,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: true,
     credentials: true,
   })
 );
@@ -40,6 +40,10 @@ const profilePicsDir = path.join(__dirname, "uploads/profilePics");
 
 // ensure static works
 app.use("/profilepics", express.static(profilePicsDir));
+// ================= TEST ROUTE =================
+app.get("/", (req, res) => {
+  res.send("Backend running successfully");
+});
 
 
 
